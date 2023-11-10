@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Finexo About{% endblock title %}
+
+{% block content %}
+
+<section class="about_section layout_padding">
+    <div class="container  ">
+        <div class="heading_container heading_center">
+            <h2>
+                About <span>Us</span>
+            </h2>
+            <p>
+                Magni quod blanditiis non minus sed aut voluptatum illum quisquam aspernatur ullam vel beatae rerum
+                ipsum voluptatibus
+            </p>
+        </div>
+        {%for ab in about%}
+        <div class="row">
+            <div class="col-md-6 ">
+                <div class="img-box">
+                    <img src="{{ab.image.url}}" alt="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="detail-box">
+                    <h3>
+                        {{ab.title}}
+                    </h3>
+                    <p>
+                        {{ab.text}}
+                    </p>
+                    <a href="">
+                        Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</section>
+{% endblock content %}

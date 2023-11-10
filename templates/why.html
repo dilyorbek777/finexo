@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Finexo About{% endblock title %}
+
+{% block content %}
+
+<section class="why_section layout_padding">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2>
+                Why Choose <span>Us</span>
+            </h2>
+        </div>
+        <div class="why_container">
+            {%for ab in why%}
+            <div class="box">
+                <div class="img-box">
+                    <img src="{{ab.image.url}}" alt="">
+                </div>
+                <div class="detail-box">
+                    <h5>
+                        {{ab.title}}
+                    </h5>
+                    <p>
+                        {{ab.text}}
+                    </p>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+        <div class="btn-box">
+            <a href="">
+                Read More
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

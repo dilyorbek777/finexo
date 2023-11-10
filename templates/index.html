@@ -1,0 +1,385 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Finexo {% endblock title %}
+
+{% block content %}
+
+
+<!-- slider section -->
+<section class="slider_section ">
+    <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <div class="detail-box">
+                                <h1>
+                                    Crypto <br>
+                                    Currency
+                                </h1>
+                                <p>
+                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic?
+                                    Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel
+                                    architecto veritatis delectus repellat modi impedit sequi.
+                                </p>
+                                <div class="btn-box">
+                                    <a href="" class="btn1">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="img-box">
+                                <img src="{% static 'images/slider-img.png'%}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <div class="detail-box">
+                                <h1>
+                                    Crypto <br>
+                                    Currency
+                                </h1>
+                                <p>
+                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic?
+                                    Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel
+                                    architecto veritatis delectus repellat modi impedit sequi.
+                                </p>
+                                <div class="btn-box">
+                                    <a href="" class="btn1">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="img-box">
+                                <img src="{% static 'images/slider-img.png'%}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <div class="detail-box">
+                                <h1>
+                                    Crypto <br>
+                                    Currency
+                                </h1>
+                                <p>
+                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic?
+                                    Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel
+                                    architecto veritatis delectus repellat modi impedit sequi.
+                                </p>
+                                <div class="btn-box">
+                                    <a href="" class="btn1">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="img-box">
+                                <img src="{% static 'images/slider-img.png'%}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ol class="carousel-indicators">
+            <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+            <li data-target="#customCarousel1" data-slide-to="1"></li>
+            <li data-target="#customCarousel1" data-slide-to="2"></li>
+        </ol>
+    </div>
+
+</section>
+<!-- end slider section -->
+</div>
+
+
+<!-- service section -->
+
+<section class="service_section layout_padding">
+    <div class="service_container">
+        <div class="container ">
+            <div class="heading_container heading_center">
+                <h2>
+                    Our <span>Services</span>
+                </h2>
+                <p>
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration
+                </p>
+            </div>
+            <div class="row">
+                {% for ser in service%}
+                <div class="col-md-4 ">
+                    <div class="box ">
+                        <div class="img-box">
+                            <img src="{{ser.image.url}}" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                {{ser.title}}
+                            </h5>
+                            <p>
+                                {{ser.text| truncatewords:17}}
+                            </p>
+                            <a href="{% url 'single' ser.slug %}">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <!-- <div class="col-md-4 ">
+                    <div class="box ">
+                        <div class="img-box">
+                            <img src="images/s2.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                Security Storage
+                            </h5>
+                            <p>
+                                fact that a reader will be distracted by the readable content of a page when looking at
+                                its layout.
+                                The
+                                point of using
+                            </p>
+                            <a href="">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="box ">
+                        <div class="img-box">
+                            <img src="images/s3.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                Expert Support
+                            </h5>
+                            <p>
+                                fact that a reader will be distracted by the readable content of a page when looking at
+                                its layout.
+                                The
+                                point of using
+                            </p>
+                            <a href="">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="btn-box">
+                <a href="">
+                    View All
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- end service section -->
+
+
+<!-- about section -->
+
+<section class="about_section layout_padding">
+    <div class="container  ">
+        <div class="heading_container heading_center">
+            <h2>
+                About <span>Us</span>
+            </h2>
+            <p>
+                Magni quod blanditiis non minus sed aut voluptatum illum quisquam aspernatur ullam vel beatae rerum
+                ipsum voluptatibus
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 ">
+                <div class="img-box">
+                    <img src="{% static 'images/about-img.png' %}" alt="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="detail-box">
+                    <h3>
+                        We Are Finexo
+                    </h3>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration
+                        in some form, by injected humour, or randomised words which don't look even slightly believable.
+                        If you
+                        are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing
+                        hidden in
+                        the middle of text. All
+                    </p>
+                    <p>
+                        Molestiae odio earum non qui cumque provident voluptates, repellendus exercitationem, possimus
+                        at iste corrupti officiis unde alias eius ducimus reiciendis soluta eveniet. Nobis ullam ab
+                        omnis quasi expedita.
+                    </p>
+                    <a href="">
+                        Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- end about section -->
+
+<!-- why section -->
+
+<section class="why_section layout_padding">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2>
+                Why Choose <span>Us</span>
+            </h2>
+        </div>
+        <div class="why_container">
+            {%for ab in abs%}
+            <div class="box">
+                <div class="img-box">
+                    <img src="{{ab.image.url}}" alt="">
+                </div>
+                <div class="detail-box">
+                    <h5>
+                        {{ab.title}}
+                    </h5>
+                    <p>
+                        {{ab.text}}
+                    </p>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+        <div class="btn-box">
+            <a href="">
+                Read More
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- end why section -->
+
+<!-- team section -->
+<section class="team_section layout_padding">
+    <div class="container-fluid">
+        <div class="heading_container heading_center">
+            <h2 class="">
+                Our <span> Team</span>
+            </h2>
+        </div>
+
+        <div class="team_container">
+            <div class="row">
+                {% for mate in team %}
+                <div class="col-lg-3 col-sm-6">
+                    <div class="box ">
+
+                        <div class="img-box">
+                            <img src="{{mate.image.url}}" class="img1" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                {{mate.name}}
+                            </h5>
+                            <p>
+                                {{mate.profession}}
+                            </p>
+                        </div>
+                        <div class="social_box">
+                            <a href="#">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end team section -->
+
+
+<!-- client section -->
+
+<section class="client_section layout_padding">
+    <div class="container">
+        <div class="heading_container heading_center psudo_white_primary mb_45">
+            <h2>
+                What says our <span>Customers</span>
+            </h2>
+        </div>
+        <div class="carousel-wrap ">
+            <div class="owl-carousel client_owl-carousel">
+                {% for crs in csmr %}
+                <div class="item">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="{{crs.image.url}}" alt="" class="box-img">
+                        </div>
+                        <div class="detail-box">
+                            <div class="client_id">
+                                <div class="client_info">
+                                    <h6>
+                                        {{crs.name}}
+                                    </h6>
+                                    <p>
+                                        {{crs.profession}}
+                                    </p>
+                                </div>
+                                <i class="fa fa-quote-left" aria-hidden="true"></i>
+                            </div>
+                            <p>
+                                {{crs.text}} </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- end client section -->
+
+
+
+{% endblock content %}
