@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ user.username }}'s profile {%  endblock title %}
+
+
+{% block content %}
+
+<h2> Username : </h2>
+<p style="padding-left: 100px;"> {{ user.username}}</p>
+<br>
+<h2> First Name : </h2>
+<p  style="padding-left: 100px;">{{user.first_name }}</p>
+<br>
+<h2> Last Name : </h2>
+<p  style="padding-left: 100px;">{{user.last_name }}</p>
+<br>
+<h2> Email : </h2>
+<p  style="padding-left: 100px;">{{user.email }}</p>
+{% endblock content %}

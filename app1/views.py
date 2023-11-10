@@ -21,7 +21,7 @@ def HomeView(req):
 def SingleView(req, slug):
     service = get_object_or_404(Services, slug=slug)
 
-    context = {"single": service}
+    context = {"service": service}
 
     return render(req, "single.pg.html", context)
 
